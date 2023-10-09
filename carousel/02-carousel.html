@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Componenet</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* main color #087f5b
+      grey color #495057*/
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #495057;
+        line-height: 1;
+        /* border-bottom: 10px solid #087f5b; */
+        /* background-color: #f4fce3; */
+      }
+
+      .carousel {
+        width: 700px;
+        background-color: #087f5b;
+        margin: 100px auto;
+        border-radius: 12px;
+        color: #fff;
+        padding: 32px;
+        padding-left: 86px;
+        padding-right: 48px;
+        display: flex;
+        /* align-items: center; */
+        gap: 86px;
+        position: relative;
+      }
+
+      img {
+        border-radius: 8px;
+        transform: scale(1.5);
+        box-shadow: rgba(1, 1, 27, 0.575) 0px 25px 28px -20px;
+      }
+      .testimonial-text {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 500;
+        margin-bottom: 32px;
+        color: #e6fcf5;
+      }
+      .testimonial-author {
+        font-size: 14px;
+        margin-bottom: 4px;
+        color: #c3fae8;
+      }
+      .testimonial-job {
+        font-size: 12px;
+        color: #c3fae8;
+      }
+      .btn {
+        background-color: #fff;
+        border: none;
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        /* top: 50%;
+        transform: translate(0, -50%); */
+      }
+      .btn-icon {
+        height: 24px;
+        width: 24px;
+        stroke: #087f5b;
+      }
+      .btn--left {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: rgba(1, 1, 27, 0.575) 0px 7px 29px 0px;
+      }
+      .btn--right {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        box-shadow: rgba(1, 1, 27, 0.575) 0px 7px 29px 0px;
+      }
+      .dots {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 48px);
+        display: flex;
+        gap: 12px;
+      }
+      .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .dot--fill {
+        background-color: #087f5b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <img
+        src="/16.jpg"
+        alt="Nwakire Stephen"
+        height="180"
+        width="auto"
+        srcset=""
+      />
+      <blockquote>
+        <p class="testimonial-text">
+          "Lorem ipsum dolor, sit amet consectetur quibusdam, pariatur sed minus
+          tempore ipsa autem cupiditate doloi!"
+        </p>
+        <p class="testimonial-author">Nwakire Stephen</p>
+        <p class="testimonial-job">Senior Architect at Stevoo Studios</p>
+      </blockquote>
+      <button class="btn btn--left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="btn-icon"
+        >
+          <path
+            d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+          />
+        </svg>
+      </button>
+      <button class="btn btn--right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="btn-icon"
+        >
+          <path
+            d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <div class="dot dot--fill">&nbsp;</div>
+        <div class="dot">&nbsp;</div>
+        <div class="dot">&nbsp;</div>
+        <div class="dot">&nbsp;</div>
+      </div>
+    </div>
+  </body>
+</html>
